@@ -1,0 +1,64 @@
+.symbolchangingSection {
+  width: clamp(6rem, 24vw, 50%);
+  // width:clamp(10rem, 24vw, 45%);
+  // height: 10.5rem;
+  background-color: #f2f2f2;
+  padding: 8px;
+  margin-left: 0.4rem;
+
+  @media screen and (max-width: 768px) {
+    width: 10rem;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .SymbolNPercentage {
+    display: flex;
+    // margin-top: 5px;
+    justify-content: space-between;
+
+    .symbolname {
+      // font-size: 17.13px;
+      font-size: 15px;
+      color: #848484;
+
+      @media screen and (max-width: 768px) {
+        font-size: 14.35px;
+      }
+    }
+
+    .percentage {
+      color: #06be71;
+      font-size: 15px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 13.35px;
+      }
+    }
+  }
+
+  .symbolPrice {
+    // font-size: 28.19px;
+    font-size: 22px;
+    font-weight: 500;
+    padding-top: 3px;
+    @media screen and (max-width: 768px) {
+      font-size: 26px;
+      line-height: initial;
+    }
+  }
+
+  .currentPos,
+  .ChangeInPosition {
+    font-size: 11px;
+    margin-top: 0.6rem;
+    color: #848484;
+  }
+
+  .currentPosValue,
+  .ChangeInPositionValue {
+    font-size: 12px;
+  }
+}

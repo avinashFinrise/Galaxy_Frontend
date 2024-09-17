@@ -1,0 +1,859 @@
+* {
+  --cardcolor: #222629;
+  --color: #161616;
+  --color1: #686666;
+}
+
+.dark {
+  background-color: var(--color) !important;
+  color: #ffffff !important;
+
+  @keyframes circle {
+    0% {
+      clip-path: circle(100%);
+    }
+
+    100% {
+      clip-path: circle(10% at 100% 2%);
+    }
+  }
+
+  animation: 1s circle reverse;
+
+  *::-webkit-scrollbar-track {
+    background-color: #f5f7f9;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 1;
+    filter: invert(0.8);
+    color: #ffffff;
+  }
+
+  .dateSection {
+    border-bottom: 1px solid #bac3d2 !important;
+    color: #bac3d2 !important;
+
+    input {
+      color: #bac3d2 !important;
+    }
+  }
+
+  .btwndateuline {
+    &::before {
+      border-bottom: 2px solid #bac3d2 !important;
+    }
+  }
+
+  .login-card,
+  .register-section {
+    // color: #000;
+    background: var(--cardcolor) !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px !important;
+
+    input::placeholder {
+      color: var(--color1);
+      /* Change the placeholder text color to white */
+    }
+  }
+
+  .form-select {
+    option {
+      background: var(--cardcolor);
+      color: #fff;
+    }
+  }
+
+  // #********************************************************************ag-grid-table ********************************************************************#
+  .ag-root-wrapper {
+    .ag-column-drop-wrapper {
+      .ag-column-drop-horizontal {
+        background-color: var(--cardcolor);
+        color: #f9fdff;
+
+        .ag-column-drop-list {
+          .ag-column-drop-empty-message {
+            color: #f9fdff;
+          }
+
+          .ag-column-drop-cell {
+            background: rgb(253 254 255);
+
+            .ag-column-drop-cell-text {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+
+    .ag-root-wrapper-body {
+
+      .ag-header,
+      input,
+      .ag-body,
+      .ag-row,
+      .ag-root,
+      .ag-side-buttons,
+      .ag-tool-panel-wrapper,
+      .ag-group-title-bar,
+      .ag-filter-toolpanel-instance-filter,
+      .ag-picker-field-wrapper {
+        background: var(--cardcolor);
+        color: #fff;
+
+        .ag-header-row,
+        .ag-group-contracted,
+        .ag-group-expanded,
+        .ag-icon-grip,
+        .ag-column-drop-list,
+        .ag-column-drop-empty-message,
+        .ag-icon-cancel {
+          color: #fff;
+        }
+
+        // .ag-floating-filter-body {
+        //   .ag-input-wrapper {
+        //     input {
+        //       // background: rgb(31 31 31);
+        //     }
+        //   }
+        // }
+      }
+
+      input {
+        color: #fff;
+      }
+
+      .ag-group-title-bar,
+      .ag-set-filter-item {
+        color: #fff;
+
+        .ag-group-title-bar-icon,
+        .ag-icon-tree-open {
+          color: #fff;
+        }
+      }
+
+      .ag-side-bar {
+        .ag-side-buttons {
+          button {
+            color: #fff;
+          }
+        }
+      }
+
+      .ag-body {
+
+        // background: rgb(31 31 31)                                                                                                                                                                   ;
+        .ag-row {
+          // background: rgb(31 31 31)                                                                                                                                                                   ;
+          color: #fff;
+          border-bottom: 1px solid #5c5e63 !important;
+
+          .ag-ltr .ag-cell {
+            border-right: 1px solid #fff;
+          }
+        }
+      }
+    }
+
+    .ag-paging-panel {
+      background: var(--cardcolor);
+      color: #fff;
+      border-top-color: #fff;
+
+      .ag-paging-button.ag-disabled {
+        color: rgb(251 254 255 / 50%);
+      }
+    }
+  }
+
+  // #********************************************************************bootstrap modal ********************************************************************#
+  .modal-content {
+    // background-color: #0f0f0f;
+    background-color: var(--cardcolor);
+    color: #9a9a9a;
+
+    .modal-header {
+      border-bottom: 1px solid #3f3f3f;
+
+      .modal-title {
+        color: #02accb;
+      }
+    }
+
+    .modal-body {
+      .form-select {
+        color: #02accb;
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%2302accb'><polygon points='0,0 100,0 50,50'/></svg>") no-repeat;
+        background-size: 11px;
+        background-position: calc(100% - 14px) 13px;
+      }
+
+      // .alertRevPositionSection,
+      // .download-section {
+      //   .form-select {
+      //     background-position: calc(100% - 14px) 15px;
+      //   }
+      // }
+      .download-section {
+        .form-select {
+          option {
+            background: var(--cardcolor);
+            color: #fff;
+          }
+        }
+
+        .ant-checkbox-wrapper {
+          color: #fff;
+        }
+      }
+
+      .create-arb-section {
+
+        .ant-form-section,
+        .strategy-listSection {
+          background: var(--color);
+
+          .headingContent {
+            color: #fff;
+          }
+        }
+
+        .ant-form {
+          .ant-form-item {
+            input {
+              background: transparent;
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .otp-mainsection {
+        input {
+          background: transparent;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .btn-close {
+    background: transparent url("../assets/Icon/vector.png") center/1em auto no-repeat !important;
+    opacity: 1;
+  }
+
+  .alertTableSection {
+    .form-check {
+      color: #ffffff;
+    }
+  }
+
+  // #******************************************************************** mui dialog ******************************************************************** #
+  .MuiPaper-rounded {
+    background: #1c2030 !important;
+    color: #fff !important;
+
+    .active-page-section {
+      color: #fff;
+    }
+  }
+
+  .MuiDialogContent-root {
+    p {
+      color: #fff;
+    }
+  }
+
+  .mui-formcontrol {
+    label {
+      color: #c5bbbb;
+    }
+
+    .MuiInputLabel-shrink,
+    .MuiOutlinedInput-notchedOutline legend {
+      background: var(--cardcolor);
+    }
+
+    .MuiOutlinedInput-root {
+      border: 1px solid #d9d9d9;
+
+
+      input {
+        color: #fff;
+      }
+
+      input::placeholder {
+        color: var(--color1);
+        /* Change the placeholder text color to white */
+      }
+    }
+  }
+
+  // #******************************************************************** header ********************************************************************#
+  .notificationAlert-card {
+    color: #cdcdcd !important;
+    background: var(--cardcolor);
+    box-shadow: rgb(65 63 63 / 24%) 0px 3px 8px;
+  }
+
+  .dashDataInfo {
+    color: #bac3d2;
+
+    span {
+      p:nth-child(2) {
+        color: #02accb;
+      }
+    }
+
+    .setting {
+      a {
+        color: #bac3d2;
+      }
+    }
+  }
+
+  .headerMainSection {
+    background: #050505;
+
+    .blinkCircle {
+      color: #06be71;
+    }
+
+    .saveWorkspaceBtn {
+      background: #24bde9;
+      border: 1px solid #24bde9;
+    }
+
+    .btn-close {
+      background: transparent url("../Assets/icons/close.svg") center/1em auto no-repeat;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .headerBtn {
+      background: #3d5a7f;
+      border: 2px solid #3d5a7f;
+    }
+
+    .notification {
+      .dropdown {
+        .notificationCard {
+          background: #32343b !important;
+          color: #ffffff;
+
+          a {
+            color: #ffffff;
+          }
+
+
+        }
+
+        // .dropdown-toggle {
+        //   &::after {
+        //     filter: invert(1);
+        //   }
+        // }
+      }
+    }
+
+    .setting {
+      .dropdown-toggle {
+        span {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .mobileMenuSection {
+    background: #0f0f0f;
+    color: #fff;
+
+    .offcanvas-body {
+      .userProfileContent {
+        p {
+          color: #d0d0d0;
+        }
+
+        span {
+          color: #878787;
+        }
+      }
+
+      .logoutBtn {
+        color: #f80707;
+        font-weight: 600;
+      }
+    }
+  }
+
+  // **********************************************************************antd******************************************************************************
+
+  .ant-picker {
+    background-color: transparent;
+    /* Change the background color to a dark color */
+    color: #fff;
+
+    /* Change the text color to white or another light color */
+    input {
+      color: #fff;
+    }
+
+    input::placeholder {
+      color: var(--color1);
+      /* Change the placeholder text color to white */
+    }
+  }
+
+  .ant-select {
+    .ant-select-selector {
+      background-color: transparent;
+
+      // color: #fff;
+      .ant-select-selection-overflow-item {
+        color: #fff;
+      }
+
+
+      .ant-select-selection-placeholder {
+        color: var(--color1);
+      }
+
+      .ant-select-disabled {
+        .ant-select-selection-item {
+          color: var(--color1);
+        }
+      }
+
+      // :where(
+      //     .css-dev-only-do-not-override-pr0fja
+      //   ).ant-select-single.ant-select-open
+      .ant-select-selection-item {
+        color: #faf4f4;
+      }
+    }
+  }
+
+  .ant-select-dropdown {
+    background: #050505;
+    color: #fff;
+
+    .ant-select-item {
+      color: #fff;
+    }
+  }
+
+  :where(.css-pr0fja).ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled),
+  :where(.css-dev-only-do-not-override-pr0fja).ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    color: #fff;
+    background: rgb(145, 135, 135);
+  }
+
+  :where(.css-pr0fja).ant-select-multiple .ant-select-selection-item,
+  :where(.css-dev-only-do-not-override-pr0fja).ant-select-multiple .ant-select-selection-item {
+    background: rgb(137 135 135);
+  }
+
+  :where(.css-dev-only-do-not-override-pr0fja).ant-picker .ant-picker-suffix {
+    color: #000;
+    filter: invert(2);
+  }
+
+  .ant-select-disabled {
+    .ant-select-selection-item {
+      color: #4d4d4d73 !important;
+    }
+  }
+
+  :where(.css-pr0fja).ant-select-multiple.ant-select-disabled .ant-select-selection-item,
+  :where(.css-dev-only-do-not-override-pr0fja).ant-select-multiple.ant-select-disabled .ant-select-selection-item {
+    background: rgba(0, 0, 0, 0.06);
+  }
+
+  .ant-form {
+    .ant-form-item {
+
+      label,
+      input {
+        color: #fff !important;
+      }
+
+      input {
+        background: rgba(0, 0, 0, 0.88);
+      }
+    }
+  }
+
+
+
+  // #******************************************************************** dashboard ********************************************************************#
+  .react-grid-layout {
+    .form-check-input {
+      background-color: transparent;
+    }
+  }
+
+  // canvas{
+  // background: #0f0f0f;
+  // }
+  .dashSelect {
+    color: #24bde9;
+
+    .selectContent {
+      color: #24bde9 !important;
+    }
+  }
+
+  .dashCardHeaderBtn,
+  .dashCardSubBtn button {
+    border: 0.84px solid #24bde9 !important;
+    color: #24bde9 !important;
+
+    &:hover {
+      background: #24bde9 !important;
+      color: #ffffff !important;
+    }
+  }
+
+  .windowCard,
+  .carousection {
+    background: var(--cardcolor);
+    box-shadow: -1px 0px 7px 0px #0000001a;
+    color: #ffffff;
+
+    .form-select {
+      color: #24bde9 !important;
+    }
+
+    .position-section,
+    .mgAndExpoHeader {
+      .form-select {
+        background-position: calc(100% - 14px) 8px;
+      }
+
+      .form-check {
+        label {
+          color: #24bde9;
+        }
+      }
+    }
+
+    .card-header {
+      color: #24bde9;
+    }
+
+
+
+    // .filter-section {
+    .donut-info-card {
+      background: transparent !important;
+      padding: 0 0 0 0.3rem;
+    }
+
+    // }
+
+    .mtmBtnSection {
+      button {
+        border: 0.85px solid #a3a4a7 !important;
+        color: #ffffff;
+      }
+
+      button:disabled {
+        // background: #999;
+        color: #555;
+        cursor: not-allowed;
+      }
+
+      .mtmCardBorder {
+        border-bottom: 1px solid #3f3f3f !important;
+      }
+    }
+
+    .symbBtnSection,
+    .posBtnSection,
+    .cmtmBtnSection {
+      button {
+        border: 0.85px solid #a3a4a7 !important;
+        color: #ffffff;
+
+        // &:focus,
+        // &:focus-visible {
+        //   // background: #3d5a7f !important;
+        //   // background: #0b1c45 !important;
+        //   // border: 0.85px solid #0b1c45;
+        // }
+      }
+
+      // button:disabled {
+      //   // background: #999;
+      //   color: #555;
+      //   cursor: not-allowed;
+      // }
+    }
+
+    .symbolchangingSection {
+      // background: #141414;
+      background: transparent;
+    }
+
+    .mgAndExpoContent {
+      background: transparent;
+
+      p {
+        color: #24bde9;
+      }
+    }
+  }
+
+  .dashBottomSection {
+    background: var(--cardcolor) !important;
+
+    .btn-feature-section,
+    button {
+
+      // button {
+      color: #fff;
+      background: var(--cardcolor) !important;
+      // }
+    }
+
+    .itemHeading {
+      color: #24bde9 !important;
+    }
+  }
+
+  //dashboard popup window
+  .popup-tableSection {
+    .column-save-btn {
+      background: #3d5a7f;
+    }
+  }
+
+  .save-restore-btn,
+  .market-watch-section {
+    button {
+      background: #3d5a7f !important;
+    }
+
+    .ant-select-arrow {
+      color: #fff;
+    }
+  }
+
+  .overall-summary-section {
+    .form-select {
+      background-position: calc(100% - 14px) 8px;
+    }
+
+    .ant-input::placeholder {
+      color: var(--color1);
+    }
+  }
+
+  .add-btn {
+    background: #3d5a7f !important;
+    // border: 2px solid #3d5a7f !important;
+  }
+
+  // #********************************************************************spreadbook  ********************************************************************#
+  .spreadBookSection,
+  .risktable {
+    background: var(--cardcolor);
+  }
+
+  // #********************************************************************setting page ********************************************************************#
+  .setting-header {
+    background: var(--cardcolor) !important;
+    box-shadow: rgb(53 51 51 / 0%) 0rem 0rem 0.0625rem 0.0625rem inset,
+      rgb(0, 0, 0) 0rem 1.25rem 1.6875rem 0rem !important;
+
+    img {
+      box-shadow: rgb(147 145 145 / 21%) 0rem 0.3125rem 0.625rem 0rem !important;
+    }
+
+    .setting-userInfo {
+      h6 {
+        color: rgb(39 115 245) !important;
+      }
+    }
+  }
+
+  .setting-mobiletabsSelction {
+    .MuiOutlinedInput-root {
+      .MuiSelect-select {
+        background-color: var(--cardcolor) !important;
+      }
+    }
+  }
+
+  .settingsetHeading {
+    color: #fff;
+  }
+
+
+  .setting-maintabs,
+  .basic-forminfo,
+  .service-maintabs,
+  .arb-table-comp,
+  form {
+    background: var(--cardcolor) !important;
+    color: #fff !important;
+
+    .setting-single-tabs {
+
+      color: #fff;
+
+      // :hover {
+      //   background: #3d3d3d78;
+      // }
+    }
+
+    option {
+      background: #1c2030;
+      color: #fff;
+      // &:hover {
+      //     background: red;
+      // }
+    }
+
+    input::placeholder {
+      color: var(--color1);
+    }
+
+    .basic-InfoBtn,
+    .btn-section .disable-btn {
+      background: #3d5a7f;
+      border: 2px solid #3d5a7f;
+
+    }
+
+    .user-detailsCard {
+      box-shadow: rgb(0 0 0 / 21%) 0rem 1.25rem 1.6875rem 0rem;
+    }
+  }
+
+  .basic-InfoBtn {
+    background: #3d5a7f;
+  }
+
+  .label-icon {
+    color: #fff !important;
+  }
+
+  .form-control,
+  .form-select,
+  .ant-input {
+    background: transparent;
+    color: #fff;
+  }
+
+  .form-select {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23fff'  ><polygon points='0,0 100,0 50,50'/></svg>") no-repeat;
+    background-size: 11px;
+    background-position: calc(100% - 14px) 13px;
+    // background-position: calc(100% - 14px) 8px;
+  }
+
+  .dropdown-menu {
+    background: #131722;
+    color: #fff;
+
+    .dropdown-item,
+    .dropdown-csvBtn {
+      color: #fff;
+    }
+
+    // .dropdown-item:hover {
+    //     background: linear-gradient(310deg, rgb(33, 82, 255), rgb(33, 212, 253));
+    // }
+  }
+
+  .alternateGroupCard {
+    border: 1px solid #cccfd3 !important;
+
+    .groupname {
+      color: #fff !important;
+    }
+
+    .alternatename {
+      color: rgb(117 239 172) !important;
+    }
+  }
+
+  // ********************************************usermanagement**********************************
+  .usermanagement-search-field {
+    input {
+      color: #fff;
+    }
+  }
+
+  .role-filter-toggle {
+    button {
+      span {
+        color: #fff;
+      }
+    }
+
+    .dropdown-menu {
+      .dropdown-item {
+        &:hover {
+          color: #000;
+        }
+
+        &:active {
+          color: #fff !important;
+        }
+      }
+    }
+  }
+
+  .usermanagement-section {
+    .usermanagement-card {
+      background-color: var(--cardcolor);
+      box-shadow: -1px 0px 7px 0px rgba(0, 0, 0, 0.1019607843);
+
+      .usermanagement-user-info {
+        .fname {
+          color: #fff;
+        }
+
+        .username {
+          color: rgb(117 239 172);
+        }
+      }
+    }
+  }
+
+
+  // ***************ErrorBoundary*************
+  .container {
+
+    .imgContainer {
+      img {
+        filter: contrast(0.5);
+      }
+
+    }
+
+    .btnWrapper {
+      button {
+
+        &:first-child {
+          background: #414141;
+          color: #fff;
+        }
+      }
+    }
+
+    pre {
+      background: #414141;
+    }
+  }
+}

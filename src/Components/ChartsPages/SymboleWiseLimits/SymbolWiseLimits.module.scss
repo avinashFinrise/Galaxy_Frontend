@@ -1,0 +1,291 @@
+.symbolWiseLimitSection {
+  width: 100%;
+  height: 100%;
+
+  .symbHeaderSection {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      right: 10px;
+    }
+
+    .symbExpandBtn {
+      background: transparent;
+      border: 0.85px solid #0a4a5c;
+      border-radius: 3px;
+      color: #0a4a5c;
+      text-transform: capitalize;
+      // position: absolute;
+      // top: 7px;
+      // right: 12px;
+      font-size: 13.59px;
+      margin-right: 0.6rem;
+      padding: 0 5px;
+      line-height: 1.3;
+
+      &:hover {
+        background: #293242;
+        color: #ffff;
+      }
+
+      .btnIcon {
+        display: none;
+      }
+
+      @media only screen and (min-width: 1030px) and (max-width: 1566px) {
+        font-size: 13px;
+      }
+
+      @media screen and (max-width: 768px) {
+        border: 0.63px solid #0a4a5c;
+        border-radius: 2px;
+        font-size: 10px;
+        padding: 0;
+
+        .textBtnContent {
+          display: none;
+        }
+
+        .btnIcon {
+          display: block;
+          font-size: 1rem;
+          line-height: 0;
+        }
+      }
+    }
+
+    .symbolSetting {
+      line-height: 1px;
+
+      @media screen and (max-width: 768px) {
+        top: 5px;
+      }
+    }
+  }
+
+  .synbolSettingSection {
+    display: flex;
+    align-items: center;
+
+    // justify-content: space-between;
+    .synbolSettingContent {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      // justify-content: space-around;
+      // width: clamp(234px, 80%, 100%);
+      // width: 78%;
+      margin: 0 auto;
+      font-size: 10.91px;
+      width: 47%;
+
+      &:nth-child(2) {
+        color: #0a4a5c;
+        font-weight: 500;
+        // color: #24BDE9;
+
+        @media screen and (max-width: 768px) {
+          width: 42%;
+        }
+      }
+
+      &:first-child {
+        margin-right: 10px;
+      }
+
+      @media only screen and (min-width: 1030px) and (max-width: 1566px) {
+        font-size: 9.33px;
+      }
+
+      .selectContent {
+        color: #0a4a5c;
+        background-color: transparent;
+        font-weight: 600;
+        font-size: 12px;
+        border: none;
+        text-transform: uppercase;
+        padding: 0;
+
+        @media screen and (max-width: 768px) {
+          padding: 0;
+          font-size: 10px;
+        }
+      }
+
+      .dropdownOption {
+        padding: 4px;
+        font-size: 12px;
+        min-width: fit-content;
+        max-height: 20rem;
+        overflow: auto;
+
+        .formCheck {
+          margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+          max-height: 18rem;
+        }
+      }
+
+      .selectForm {
+        border: none;
+        // width: 7rem;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 600;
+        color: #0a4a5c;
+        // margin-right: 0.6rem;
+        background-color: transparent;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+
+
+      .expandBtn {
+        button {
+          font-size: 1.2rem;
+          padding: 0;
+          line-height: 0;
+          background: transparent;
+          border: 0.85px solid #0a4a5c;
+          border-radius: 3px;
+          color: #0a4a5c;
+          text-transform: capitalize;
+
+          &:hover {
+            background: #293242;
+            color: #ffff;
+
+          }
+
+          @media screen and (max-width: 768px) {
+            font-size: 16px;
+            line-height: 0;
+            border: 0.63px solid #0a4a5c;
+            border-radius: 2px;
+            padding: 0;
+          }
+
+        }
+      }
+    }
+  }
+
+
+
+  .symbolWiseLimitInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72%;
+    // height: 85%;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+      height: 66%;
+    }
+
+    @media only screen and (min-width: 1030px) and (max-width: 1566px) {
+      height: 70%;
+      // height: 89%;
+    }
+  }
+
+  .symbolPendigUsedLimit {
+    // position: absolute;
+    // bottom: 8rem;
+    font-size: 13.3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    // width: 47%;
+
+    .pendingLimit,
+    .usedLimit {
+      cursor: pointer;
+
+      // &::before {
+      //   content: "";
+      //   padding: 4px;
+      //   height: 8px;
+      //   display: inline-block;
+      //   margin-right: 2px;
+      //   border-radius: 3px;
+      // }
+      span {
+        // padding: 4px;
+        height: 8px;
+        width: 8px;
+        display: inline-block;
+        margin-right: 2px;
+        border-radius: 3px;
+      }
+    }
+
+    .pendingLimit span {
+      background: #075792;
+    }
+
+    .usedLimit span {
+      background: #06be71;
+    }
+  }
+
+  .symbBtnSection {
+    .symbBtn {
+      // margin-top: 0.5rem;
+      display: flex;
+      // justify-content: space-between;
+      margin: 0.5rem 0.2rem 0;
+      align-items: center;
+      // justify-content: space-between;
+
+      button {
+        background: transparent;
+        border: 0.85px solid #293242;
+        border-radius: 3px;
+        width: clamp(3rem, 5.22rem, 100%);
+        // font-size: 13.59px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0;
+        text-align: center;
+
+        // width: clamp(4rem, 8rem, 100%);
+        @media screen and (max-width: 768px) {
+          border: 0.64px solid #293242;
+          border-radius: 2px;
+          font-size: 11.19px;
+          padding: 1px;
+          width: clamp(3rem, 4rem, 100%);
+        }
+
+        @media screen and (min-width: 1030px) and (max-width: 1566px) {
+          width: clamp(3rem, 4rem, 100%);
+        }
+
+        &:not(:last-child) {
+          margin-right: 4px;
+        }
+
+
+      }
+    }
+  }
+}

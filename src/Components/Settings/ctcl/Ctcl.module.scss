@@ -1,0 +1,54 @@
+.addCtclForm {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    .submitBtn {
+        text-align: center;
+
+        button {
+            width: 30%;
+            margin-top: 1.5rem;
+            border-radius: 3px;
+            border: none;
+            background: #293242;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+.ctclSection {
+
+    .updateBtn,
+    .addBtn {
+        border: none;
+        text-transform: uppercase;
+        color: #fff;
+        border-radius: 3px;
+
+    }
+
+    .updateBtn {
+        line-height: 1;
+        background: rgb(29, 126, 195);
+        padding: 4px 6px;
+        font-size: 13px;
+        vertical-align: text-top;
+
+        &:hover {
+            background: rgb(3, 87, 3);
+        }
+    }
+
+    .addBtn {
+        width: 100%;
+        background: rgb(3, 87, 3);
+
+        @media screen and (max-width: 768px) {
+            width: 30%;
+        }
+
+
+    }
+}

@@ -1,0 +1,218 @@
+.dashboardSection1 {
+  height: 88vh !important;
+  // overflow-y: auto;
+  // overflow-x: hidden;
+
+}
+
+.navdashsection {
+  padding-bottom: 3rem;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 0;
+  }
+
+}
+
+.dashboardSection {
+  overflow-y: auto;
+  // height: 83vh;
+  height: calc(100vh - 1rem);
+  overflow-x: hidden;
+  // .dashWindSection {
+
+  //   // margin-bottom: 5rem;
+  //   // @media only screen and (min-width: 1030px) and (max-width: 1566px) {
+  //   //   height: 81vh;
+  //   //   overflow-y: auto;
+  //   // }
+
+  //   // margin-bottom: 5rem ;
+  //   // @media screen and (max-width: 768px) {
+  //   //     display: none;
+  //   // }
+  // }
+
+  // .dashCurouselSection {
+  //     // display: none;
+
+  //     @media screen and (max-width:768px) {
+  //         display: block;
+  //     }
+  // }
+  @media screen and (max-width: 768px) {
+    height: 92vh !important;
+    overflow-x: hidden;
+  }
+
+  .initialHeight {
+    max-height: 9vh;
+    transition: height 0.3s ease;
+
+    @media screen and (max-width:768px) {
+      max-height: 8rem;
+      min-height: fit-content;
+    }
+
+    // transition: height 0.3s ease;
+  }
+
+  .expandedHeight {
+    height: fit-content;
+    // transition: height 2s;
+    // transition-timing-function: linear;
+  }
+
+  .dashBottomSection {
+    box-shadow: 0px 0px 9px -4px rgb(0 0 0 / 44%);
+    font-size: 12px;
+    margin: 0;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+
+    overflow-y: auto;
+
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    // @media only screen and (min-width: 1030px) and (max-width: 1566px) {
+    //     position: sticky;
+    //     // position: fixed;
+    //     bottom: 0;
+    // }
+
+    @media screen and (max-width: 768px) {
+      position: unset;
+      box-shadow: -1px 0px 7px 0px rgba(0, 0, 0, 0.1019607843);
+      width: 92vw;
+      margin: 0 auto;
+      // height: 10rem;
+
+      margin-top: 1rem;
+      border-radius: 10px;
+      margin-bottom: 0.5rem;
+    }
+
+    .btnFeatureSection {
+      position: fixed;
+      // position: sticky;
+      display: flex;
+      justify-content: space-between;
+      width: 99%;
+      align-items: center;
+      background: #fff;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+      overflow: hidden;
+
+      @media screen and (max-width:768px) {
+        // width: 89%;
+        position: sticky;
+      }
+
+      button {
+        border: none;
+        // display: flex;
+        // position: fixed;
+        background: #fff;
+        width: 96%;
+
+        // justify-content: center;
+        svg {
+          margin-bottom: 6px;
+        }
+
+      }
+
+      .symboleListContent {
+        position: absolute;
+        font-size: 1rem;
+        top: -1px;
+        right: 0.5rem;
+        cursor: pointer;
+      }
+    }
+
+    .dashbottomContent {
+      // display: flex;
+      // justify-content: space-between;
+
+      // &:first-child {
+      //     margin-bottom: 0.5rem;
+      // }
+      margin-left: 0;
+      margin-right: 0;
+      padding-top: 1.5rem;
+
+      @media screen and (max-width:768px) {
+        // justify-content: space-around;
+        justify-content: space-between;
+        padding: 0.4rem 12px;
+
+        // --bs-gutter-x: unset;
+      }
+
+
+      .dashSingleContent {
+        margin-bottom: 0.5rem;
+        width: 12.5%;
+
+        // width: max-content;
+        @media only screen and (min-width: 1030px) and (max-width: 1566px) {
+          width: 16.66747%;
+        }
+
+        @media screen and (max-width: 768px) {
+          width: 46%;
+          margin-bottom: 0.7rem;
+          padding: 0;
+        }
+
+        .itemHeading {
+          margin-bottom: 0;
+          color: #0a4a5c;
+          font-weight: 600;
+          font-size: 11px;
+
+          @media screen and (max-width: 768px) {
+            word-break: break-all;
+
+          }
+        }
+
+        // .symbolSection {
+        //   .selectContent {
+        //     color: #0a4a5c;
+        //     background-color: transparent;
+        //     font-weight: 600;
+        //     font-size: 12px;
+        //     border: none;
+        //     text-transform: uppercase;
+        //     padding-left: 0;
+        //     padding-top: 0;
+        //     padding-bottom: 0;
+        //     @media screen and (max-width: 768px) {
+        //       padding: 0;
+        //       font-size: 12px;
+        //     }
+        //   }
+        //   .dropdownOption {
+        //     padding: 4px;
+        //     font-size: 13px;
+        //     min-width: fit-content;
+        //     max-height: 3rem;
+        //     overflow: auto;
+        //     .formCheck {
+        //       margin-bottom: 0;
+        //     }
+        //   }
+        // }
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

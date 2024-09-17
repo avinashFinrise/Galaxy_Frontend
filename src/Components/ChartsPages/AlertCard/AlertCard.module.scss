@@ -1,0 +1,326 @@
+.alertmainSection {
+  height: 19.435rem;
+  overflow-y: auto;
+
+  @media screen and (max-width: 768px) {
+    height: 14rem;
+  }
+
+  .alertSection {
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+      // display: block;
+      position: relative;
+
+      // &:nth-child(even) {
+      //   padding-left: 0.3rem;
+      // }
+    }
+
+    .limitReach {
+      animation: blinking 1s linear infinite;
+    }
+
+    .alertCard.alertCardSizeInc {
+      height: fit-content;
+      // height: 17rem;
+    }
+
+    .reversedPosition {
+      overflow-x: auto !important;
+
+      .alertContent {
+        min-width: 5rem;
+      }
+    }
+
+
+
+    .alertCard {
+      padding: 6px 14px;
+      height: 4rem;
+      // overflow-y: auto;
+      overflow: hidden;
+      font-size: 12px;
+      color: #fff;
+      width: clamp(26%, 93%, 100%);
+      border-radius: 3px;
+      background: #fd8536;
+      text-align: left;
+      border: none;
+      cursor: pointer;
+      transition: height 0.3s ease;
+
+      @media screen and (max-width: 768px) {
+        // height: 100%;
+        height: 5rem;
+        padding: 6px 8px;
+        width: 100%;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+
+      .alertTitle {
+        font-size: 14px;
+        font-weight: 600;
+        color: #fffdfd;
+        padding-bottom: 5px;
+      }
+
+      .alertContentSection {
+        display: flex;
+        justify-content: space-between;
+        // width: clamp(9rem, 23vw, 100%);
+        width: 100%;
+
+        @media screen and (max-width: 768px) {
+          // display: block;
+        }
+
+        .alertContent {
+          width: clamp(1rem, 25vw, 96%);
+
+          &:not(:first-child) {
+            // padding-right: 3px;
+            border-left: 1px solid #fff;
+          }
+
+          &:not(:first-child) {
+            padding-left: 10px;
+          }
+
+          @media screen and (max-width: 768px) {
+            &:not(:first-child) {
+              padding-left: 6px;
+              // border-left: unset;
+            }
+
+            width: auto;
+
+            // &:not(:first-child) {
+            //   padding-left: 0;
+            // }
+          }
+        }
+      }
+
+      @keyframes blinking {
+        0% {
+          opacity: 1;
+        }
+
+        50% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @media only screen and (min-width: 1030px) and (max-width: 1566px) {
+        padding: 3px 6px;
+
+        .alertContent {
+          line-height: 1.2;
+        }
+
+        .alertTitle {
+          padding-bottom: 2px;
+        }
+      }
+    }
+
+    .alertSetting {
+      cursor: pointer;
+
+      @media screen and (max-width: 768px) {
+        position: absolute;
+        right: 1rem;
+        top: 0;
+      }
+    }
+  }
+}
+
+.exchangeSelection {
+  .selectContent {
+    @media screen and (max-width: 768px) {
+      &:first-child {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+.exchangeSelection,
+.groupSelection,
+.symbolSelection {
+
+  // @media screen and (max-width: 768px) {
+  //   margin-right: 0.5rem;
+  // }
+  .selectContent {
+    color: #0a4a5c;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 13px;
+    border: none;
+    padding: 0 9px;
+
+    @media screen and (max-width: 768px) {
+      padding: 0;
+      font-size: 12px !important;
+    }
+  }
+
+  .dropdownOption {
+    padding: 4px;
+    font-size: 13px;
+    min-width: fit-content;
+    max-height: 20rem;
+    overflow: auto;
+
+    .formCheck {
+      margin-bottom: 0;
+
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 12px !important;
+      max-height: 18rem;
+    }
+  }
+}
+
+// popup
+.alertRevPositionSection {
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.alertTableSection {
+
+  .optionCheckBoxSection,
+  .optionSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    font-size: 14px;
+    font-weight: 300;
+    z-index: 999;
+
+    text-transform: capitalize;
+  }
+
+  .optionSection {
+    right: 14.5rem;
+    top: 1.2rem;
+
+    .formSelect {
+      border: none;
+      background-color: transparent;
+      font-size: 14px;
+      font-weight: 600;
+      color: #0a4a5c;
+
+      &:focus {
+        box-shadow: unset;
+      }
+
+      @media screen and (max-width: 768px) {
+        // font-size: 12px;
+        padding-left: 0;
+        padding-right: 1.9rem;
+        background-size: 9px 13px;
+        background-position: right 0.9rem center;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      position: unset;
+      // justify-content: end;
+    }
+  }
+
+  .optionCheckBoxSection {
+    right: 5.3rem;
+    top: 1.5rem;
+
+    .formCheck {
+      margin-left: 1rem;
+
+    }
+
+    @media screen and (max-width: 768px) {
+      position: unset;
+      justify-content: space-between;
+      height: 3.4rem;
+    }
+
+    .saveBtn {
+      font-size: 13px;
+      border-radius: 3px;
+      border: none;
+      color: #ffffff;
+      padding: 3px 7px;
+      text-transform: uppercase;
+      background: #008ea8;
+      margin-right: 1rem;
+
+      .textBtnContent {
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      .btnIcon {
+        display: none;
+      }
+
+      @media screen and (max-width: 768px) {
+        position: absolute;
+        top: 0px;
+        padding: 3px;
+
+        .btnIcon {
+          display: block;
+          font-size: 1.14rem !important;
+          line-height: 0;
+        }
+
+      }
+
+    }
+
+    // width: clamp(9rem, 8%, 40%);
+    // .formCheck {
+    //   margin-bottom: 0;
+    //   margin-left: 2rem;
+
+
+    //   @media screen and (max-width: 768px) {
+    //     margin-left: 1rem;
+    //   }
+    // }
+
+  }
+
+  .alertTable {
+    height: 87vh;
+
+    @media screen and (max-width: 768px) {
+      height: 83vh;
+    }
+  }
+}

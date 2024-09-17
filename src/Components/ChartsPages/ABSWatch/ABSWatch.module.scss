@@ -1,0 +1,318 @@
+.absSection {
+  height: 100%;
+
+  .createBtn,
+  .expandBtn {
+    background: transparent;
+    border: 0.85px solid #0a4a5c;
+    border-radius: 3px;
+    color: #0a4a5c;
+    position: absolute;
+    top: 2px;
+
+    // font-size: 13.59px;
+    font-size: 13px;
+    line-height: 1.2;
+
+    padding: 0px 5px;
+
+    &:hover {
+      background: #293242;
+      color: #ffff;
+    }
+
+    .btnIcon {
+      display: none;
+    }
+
+    @media only screen and (min-width: 1030px) and (max-width: 1566px) {
+      font-size: 13px;
+    }
+
+    @media screen and (max-width: 768px) {
+      border: 0.63px solid #0a4a5c;
+      border-radius: 2px;
+      font-size: 10px !important;
+      top: 5px;
+      padding: 0;
+
+      .textBtnContent {
+        display: none;
+      }
+
+      .btnIcon {
+        display: block;
+        font-size: 1rem;
+        line-height: 0;
+      }
+    }
+  }
+
+  .createBtn {
+    right: 58px;
+    // font-size: 13.59px;
+
+    @media screen and (max-width: 768px) {
+      right: 2.5rem;
+      font-size: 10px !important;
+    }
+  }
+
+  .expandBtn {
+    right: 5px;
+
+    @media screen and (max-width: 768px) {
+      right: 4px;
+    }
+  }
+}
+
+.absTableHeader {
+  position: fixed;
+  top: 1.4rem;
+  right: 5rem;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    position: unset;
+    justify-content: end;
+    margin-bottom: 1rem;
+  }
+
+  .exchangeSelection {
+    border: none;
+    color: #0a4a5c;
+    text-transform: capitalize;
+    // margin-right: 1.1rem;
+    font-weight: 600;
+    font-size: 13px;
+    width: 6rem;
+    background-color: transparent;
+    padding: 1px;
+
+    &:focus {
+      box-shadow: unset;
+    }
+
+    .selectContent {
+      color: #0a4a5c;
+      background-color: transparent;
+      font-weight: 600;
+      font-size: 13px;
+      border: none;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 768px) {
+        padding: 0;
+      }
+    }
+
+    .dropdownOption {
+      padding: 4px;
+      font-size: 13px;
+      min-width: fit-content;
+      max-height: 20rem;
+      overflow: auto;
+
+      .formCheck {
+        margin-bottom: 0;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 12px !important;
+      }
+    }
+  }
+
+  .rowSaveBtn,
+  .deleteBtn,
+  .addNewBtn {
+    border-radius: 3px;
+    border: none;
+    color: #ffffff;
+    padding: 3px 7px;
+    // margin-right: 1rem;
+    margin-left: 1rem;
+
+    @media screen and (max-width: 768px) {
+      padding: 3px;
+    }
+  }
+
+  // button:not(:last-child) {
+  //     margin-left: 1rem;
+  // }
+  .rowSaveBtn {
+    background: #008ea8;
+  }
+
+  .deleteBtn {
+    background: #c94a4a;
+  }
+
+  .addNewBtn {
+    background: #3d5a7f;
+  }
+
+  .rowSaveBtn,
+  .deleteBtn,
+  .addNewBtn {
+    .btnIcon {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      .textBtnContent {
+        display: none;
+      }
+
+      .btnIcon {
+        display: block;
+        font-size: 1.14rem !important;
+        line-height: 0;
+      }
+    }
+  }
+}
+
+.createARBSection {
+  // align-items: center;
+  justify-content: space-between;
+  height: 99%;
+
+  @media screen and (max-width: 768px) {
+
+    height: auto;
+  }
+
+  .headingContent {
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    font-weight: 700;
+
+  }
+
+  .antFormSection,
+  .strategyList {
+    border-radius: 1.25rem;
+    padding: 2.5rem;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    width: 49%;
+    margin: 0;
+
+    height: 100%;
+
+    @media screen and (max-width: 768px) {
+      width: 96%;
+      margin: 0 auto;
+      padding: 1.5rem;
+      height: auto;
+    }
+  }
+
+  .antFormSection {
+    @media screen and (max-width: 768px) {
+      margin-bottom: 1rem;
+    }
+
+    .formItem {
+      @media screen and (max-width: 768px) {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .parityLegSession {
+      .exchgContent {
+        width: 30%;
+      }
+
+      .symbolContent {
+        width: 68%;
+      }
+
+      // display: flex;
+    }
+  }
+
+  .createBtn,
+  .deleteBtn {
+    button {
+      font-weight: 700;
+      font-size: 1rem;
+      height: 2.3rem;
+      line-height: 0;
+      padding: 4px 20px;
+      border: none;
+
+
+    }
+  }
+
+  .createBtn {
+    padding-top: 2rem;
+    justify-content: center;
+    display: flex;
+
+    button {
+      background: green;
+      color: #fff;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding-top: 0.7rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .strategyList {
+    // border-radius: 1.25rem;
+    // padding: 1rem;
+    // background: rgb(255, 255, 255);
+    // box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    // width: 49%;
+    // margin: 0;
+
+    .headingSection {
+      display: flex;
+      justify-content: space-around;
+      position: relative;
+
+      .deleteBtn {
+        position: absolute;
+        right: 0;
+
+        @media screen and (max-width: 768px) {
+          margin-bottom: 0.5rem;
+          top: 2.5rem;
+        }
+
+        button {
+          background: red;
+          color: #fff;
+        }
+      }
+    }
+
+    .arbTable {
+      height: 75vh;
+
+      @media screen and (max-width: 768px) {
+        height: 33vh;
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+.absWatchTable {
+  height: 86vh;
+
+  @media screen and (max-width: 768px) {
+    height: 84vh;
+  }
+}

@@ -1,0 +1,133 @@
+.settingIcon,
+.fullscreen,
+.isLive,
+.opttypefilter {
+    position: absolute;
+    top: 0px;
+
+}
+
+.settingIcon {
+    right: 10px;
+    cursor: pointer;
+}
+
+
+.fullscreen {
+    right: 32px;
+    cursor: pointer;
+
+
+}
+
+.opttypefilter,
+.opttypefilter1 {
+    display: flex;
+    width: 33rem;
+    justify-content: space-between;
+}
+
+.opttypefilter {
+    right: 7.5rem;
+    top: 1px;
+    height: 29px;
+
+    >div {
+        width: 88%;
+    }
+
+    .opttypeFilterSelct {
+        height: 24px;
+
+
+
+
+    }
+
+}
+
+.opttypefilter1 {
+    position: fixed;
+    right: 5rem;
+    top: 1.2rem;
+
+    >div {
+        width: 48%;
+    }
+}
+
+.isLive {
+    top: 3px;
+    right: 58px;
+    cursor: pointer;
+    color: #e90c0c;
+
+    input[type='checkbox'] {
+        accent-color: red;
+        cursor: pointer !important;
+    }
+}
+
+
+.paritySection {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+
+    .legSection {
+        .selectionList {
+            width: 49%;
+        }
+    }
+
+    .createBtn {
+        padding-top: 1.5rem;
+        justify-content: center;
+        display: flex;
+
+        button {
+            width: 9rem;
+            background: green;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border: none;
+        }
+    }
+}
+
+.deleteParity {
+    display: flex;
+    margin: 2rem;
+
+    .deleteWindow {
+
+        display: flex;
+        background-color: rgb(216, 216, 216);
+        margin: 1rem;
+        width: 8rem;
+        justify-content: space-between;
+        border-radius: 10px;
+
+        .parityName {
+            padding: 0.5rem;
+        }
+    }
+
+    button {
+        border: none;
+        background-color: rgb(216, 216, 216);
+        border-radius: 10px;
+    }
+
+}
+
+.saveBtn {
+    border: none;
+    vertical-align: middle;
+    font-size: 1.4rem;
+    text-align: center;
+    width: 100%;
+    line-height: 0;
+    margin: 0 auto;
+    background: none;
+}

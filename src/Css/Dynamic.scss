@@ -1,0 +1,578 @@
+//************************************************************************* header *************************************************************************
+.offcanvas {
+  transition: transform 0.6s ease-in-out;
+}
+
+@keyframes slideIn {
+  // 0% {
+  //   transform: translateX(1rem);
+  //   opacity: 0;
+  // }
+
+  // 100% {
+  //   transform: translateX(0rem);
+  //   opacity: 1;
+  // }
+
+  // 0% {
+  //   transform: translateX(1rem);
+  //   opacity: 0;
+  // }
+
+  from {
+    transform: translateY(-10rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(1rem);
+    opacity: 1;
+  }
+}
+
+
+.notification {
+  .notification-count {
+    .MuiBadge-badge {
+      right: 2px;
+      top: 0px;
+      background: linear-gradient(310deg, rgb(33, 82, 255), rgb(33, 212, 253));
+      color: #fff;
+    }
+  }
+
+  .dropdown-menu {
+    padding: 0;
+    background: unset;
+    margin-top: 0;
+    border: none;
+    left: -1rem !important;
+    animation: 0.35s ease-in slideIn;
+
+
+    @media screen and (max-width: 768px) {
+      position: absolute;
+    }
+
+
+
+    .dropdown-item {
+      padding: 0;
+
+      &:focus,
+      &:hover {
+        background-color: unset;
+      }
+    }
+
+    :where(.css-dev-only-do-not-override-pr0fja).ant-switch .ant-switch-handle,
+    :where(.css-pr0fja).ant-switch .ant-switch-handle {
+      width: 15px;
+      height: 15px;
+      top: 0px;
+    }
+
+
+    :where(.css-dev-only-do-not-override-pr0fja).ant-switch.ant-switch-checked .ant-switch-handle,
+    :where(.css-pr0fja).ant-switch.ant-switch-checked .ant-switch-handle {
+      inset-inline-start: calc(100% - 15px);
+    }
+  }
+
+}
+
+// canvas {
+//   // width: 100% !important;
+// }
+
+//************************************************************************* modal *************************************************************************
+
+// .mtmGroupWisePop,
+// .mtmSymbolWisePop {
+//   // z-index: 9999;
+// }
+
+.downloadReport {
+  .modal-dialog {
+    width: 600px;
+    max-width: 600px;
+
+    @media screen and (max-width: 768px) {
+      width: auto;
+    }
+
+    // .modal-header {
+    //   position: relative;
+    // }
+  }
+}
+
+.modal-fullscreen {
+  .modal-content {
+    height: 98%;
+    border-radius: 10px;
+    width: 99vw;
+    margin: 0 auto;
+
+    @media screen and (max-width: 768px) {
+      width: 98vw;
+    }
+  }
+}
+
+.modal-content {
+  .modal-header {
+    border-bottom: 1px solid #2932423d;
+    // margin: 0 1.5rem;
+    margin: 0 1.1rem;
+    padding: 0.8rem 0;
+    color: #0a4a5c;
+
+    @media screen and (max-width: 768px) {
+      border: none;
+      padding: 1rem 0 6.4px 0;
+      margin: 0 1rem;
+    }
+
+    .modal-title {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    .btn-close {
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 1.3rem;
+
+    @media screen and (max-width: 768px) {
+      padding: 0.7rem 1rem;
+    }
+  }
+
+  .modal-footer {
+    border-top: none;
+    margin: 0 1.1rem;
+    padding: 0.8rem 0;
+  }
+}
+
+.modal.fade .modal-dialog {
+  transition: transform 0.4s ease-out !important;
+  // transform: translate(0,-50px);
+}
+
+//************************************************************************* agr grid table *************************************************************************
+.custom-table {
+  height: 41vh !important;
+
+  .ag-header-viewport {
+    text-transform: uppercase;
+  }
+}
+
+.datasummary {
+  .ag-header-row {
+    height: 32px !important;
+  }
+}
+
+.popup-custom-table {
+  height: 87vh;
+
+  @media screen and (max-width: 768px) {
+    height: 75vh;
+  }
+}
+
+.popup-cposition-table {
+  height: 87vh;
+
+  @media screen and (max-width: 768px) {
+    height: 80vh;
+  }
+}
+
+
+.ag-theme-alpine {
+
+  .ag-body {
+    flex: unset;
+  }
+
+  .ag-cell-wrapper,
+  .ag-cell-wrapper.ag-row-group {
+    height: 28px;
+    align-items: center;
+  }
+
+  .ag-group-title-bar {
+    height: 33px;
+  }
+
+  .ag-row {
+    height: 30px !important;
+
+    /* Adjust the height as needed */
+    .ag-cell {
+      line-height: 1.9 !important;
+    }
+
+
+  }
+
+}
+
+//**************************************************************************antd ***********************************************************************
+
+.ant-picker-dropdown {
+  z-index: 9999;
+}
+
+.ant-picker {
+  border: none;
+
+  .ant-picker-clear {
+    display: none;
+  }
+}
+
+:where(.css-dev-only-do-not-override-pr0fja).ant-picker-focused {
+  box-shadow: none;
+}
+
+.popupdateSection {
+  .ant-picker {
+    padding: 0;
+  }
+
+  :where(.css-dev-only-do-not-override-pr0fja).ant-picker-range .ant-picker-active-bar {
+    margin-inline-start: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ant-picker-panel-container {
+    width: 84vw;
+    overflow: auto !important;
+  }
+}
+
+.ant-select-selector {
+  padding: 4px 12px;
+}
+
+
+.ant-select-dropdown {
+  z-index: 9999999;
+}
+
+.create-arb-section {
+  .ant-form-item-label {
+    padding-bottom: 2px;
+  }
+}
+
+
+//************************************************************************* mui tabs *************************************************************************
+.setting-maintabs,
+// .tabular-maintabs,
+.service-maintabs,
+.arb-table-comp {
+  .Mui-selected {
+    color: #fff !important;
+    background: linear-gradient(310deg, rgb(33, 82, 255), rgb(33, 212, 253));
+    border-radius: 0.5rem;
+    border-bottom: none;
+    border: none !important;
+  }
+
+  .MuiTabs-indicator {
+    display: none;
+  }
+}
+
+.service-maintabs,
+.arb-table-comp {
+  .MuiTabs-scroller {
+    overflow: overlay !important;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      height: 3px;
+      // display: none;
+    }
+
+    .MuiTabs-flexContainer {
+      height: 29px;
+    }
+  }
+
+  .MuiTypography-root {
+    height: 100%;
+  }
+}
+
+
+.setting-mobiletabsSelction {
+  margin-bottom: 1rem;
+
+  .MuiOutlinedInput-root {
+    width: 100%;
+
+    .MuiSelect-select {
+      padding: 7px !important;
+    }
+  }
+}
+
+.MuiMenu-list {
+  .setting-tablist {
+    font-size: 1rem !important;
+  }
+}
+
+.settingsetHeading {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  text-align: left;
+
+  .setHeadimgIcon {
+    color: rgba(0, 0, 0, 0.7);
+    background: rgb(233, 236, 239);
+    min-width: 1rem;
+    min-height: 1rem;
+    border-radius: 0.3rem;
+    padding: 5px;
+    margin-right: 1rem;
+    display: grid;
+  }
+}
+
+.tab-select-content {
+  min-height: 24px !important;
+  margin-bottom: 0.1rem;
+  width: 80%;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  .setting-single-tabs {
+    margin: 0 0.3rem;
+    min-width: 2rem;
+    min-height: 1.4rem;
+    cursor: pointer;
+    padding: 0 9px;
+    line-height: 0;
+    height: 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 12px;
+
+    @media screen and (max-width: 768px) {
+      margin: 0 0.3rem;
+      min-height: 29px;
+      padding: 4px 6px;
+    }
+  }
+}
+
+
+
+//************************************************************************* material table *************************************************************************
+.MuiPaper-elevation {
+  .MuiTableContainer-root {
+    max-height: 77vh;
+  }
+
+  @media screen and (max-width: 768px) {
+    .MuiList-root {
+      .MuiMenuItem-root {
+        font-size: 0.696rem;
+        padding: 6px;
+      }
+    }
+  }
+}
+
+//************************************************************************userpermission ***************************************************************************
+.antdMultiSelect {
+  .antdSelect {
+    .ant-select-selector {
+      max-height: 6rem;
+      overflow-y: auto;
+    }
+  }
+}
+
+.role-filter-toggle {
+  .dropdown-toggle {
+    background: transparent;
+    border: none;
+    // padding: 6px 0;
+    padding-right: 0;
+
+    &::before {
+      border: none;
+    }
+  }
+
+  .btn:active {
+    background: unset;
+  }
+}
+
+// ************************************************************************register*************************************************************************
+.register-section,
+.change-pwd-section,
+.set-password {
+  .is-invalid {
+    background-image: none;
+  }
+}
+
+// ************************************************************************downloadReport************************************************************************
+.download-section {
+  .ant-select {
+    .ant-select-selector {
+      max-height: 5rem;
+      overflow-y: auto;
+      min-height: 2rem;
+    }
+  }
+}
+
+//***************************************************************setting Active2FA***************************************************************
+.telegram-popup {
+  .MuiPaper-root {
+    @media screen and (max-width: 768px) {
+      margin: 0 auto;
+      width: 98vw;
+      max-height: calc(100% - 19px);
+
+      .MuiDialogContent-root {
+        padding: 15px 5px;
+      }
+    }
+  }
+}
+
+.loading,
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.loading {
+  cursor: wait !important;
+}
+
+// ****************** Market Watch***********************
+.market-watch-section {
+  .antFormItem {
+    .ant-form-item-label {
+      // text-align: start;
+      margin-right: 0.5rem;
+    }
+
+
+    .ant-form-item-control-input-content {
+      display: flex;
+
+      .ant-select-single {
+        height: 20px !important;
+
+        input {
+          vertical-align: super;
+        }
+      }
+    }
+
+  }
+
+
+}
+
+.ant-skeleton-image {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.arb-table-comp,
+.risktable,
+.accountTable {
+  background: #f9f9f9;
+  height: 95vh;
+  padding-top: 0.8rem;
+}
+
+.riskmodalpopup {
+  .modal-content {
+    width: 70%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  .mui-formcontrol {
+    .MuiInputLabel-shrink {
+      top: 0 !important;
+    }
+  }
+}
+
+
+//datasummary
+.opttypeFilterSelct {
+  .ant-select-selection-item {
+    height: 16px;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+}
+
+.select-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  font-size: 14px;
+  font-weight: 300;
+  z-index: 999;
+  text-transform: capitalize;
+  top: 1.2rem;
+  right: 3.7rem;
+
+  @media screen and (max-width: 768px) {
+    top: -1px;
+    right: 10px;
+  }
+
+
+
+  select {
+    border: none;
+    // width: 7rem;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    color: #0a4a5c;
+    margin-right: 0.6rem;
+    background-color: transparent;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}

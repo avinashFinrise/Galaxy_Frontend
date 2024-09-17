@@ -1,0 +1,165 @@
+.addBtn {
+    width: 100%;
+}
+
+.addAlternateForm {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    .createBtn {
+        padding-top: 2rem;
+        justify-content: center;
+        display: flex;
+
+        button {
+            background: green;
+            color: #fff;
+            // font-weight: 500;
+            font-size: 1.4rem;
+            height: 39px;
+            line-height: 0;
+            // padding: 4px 20px;
+            border: none;
+            width: 11rem;
+
+            &:hover {
+                color: #fff !important;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            padding-top: 0.7rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.alternateGroupInfo {
+    // height: 84vh;
+    max-height: 84vh;
+    min-height: 19vh;
+    overflow: overlay;
+    // padding: 0 1rem;
+    padding: 0 1rem 0 0.6rem;
+
+    @media screen and (max-width:768px) {
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    .alternateGroupCard {
+        transition: all 0.3s ease-in-out;
+        color: rgba(0, 0, 0, 0.87);
+        border: 1px solid #000;
+        border-radius: 0.5rem;
+        padding: 5px;
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+        position: relative;
+
+        .userInfo {
+            max-height: 7.8vh;
+            padding: 3px;
+
+            .groupname {
+                font-size: 0.93rem;
+                // opacity: 1;
+                line-height: 1;
+                color: rgb(52, 71, 103);
+                font-weight: 500;
+                margin-bottom: 0;
+                text-transform: uppercase;
+            }
+
+            .alternatename {
+                font-size: 0.8rem;
+                font-weight: 500;
+                // opacity: 1;
+                margin-bottom: 0;
+                color: rgb(29 90 7);
+            }
+        }
+
+        &:hover {
+            background: linear-gradient(310deg, rgb(33, 82, 255), rgb(33, 212, 253));
+
+        }
+    }
+
+    .active {
+        background: linear-gradient(310deg, rgb(193, 186, 233), #8ba0ff);
+
+    }
+
+}
+
+.infoSection {
+    border: 1px solid #cccfd3;
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+    .groupnameandedit {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .editSave {
+            display: flex;
+            justify-content: space-between;
+
+            // width: 8rem;
+            .editbutton,
+            .savebutton,
+            .delete {
+                cursor: pointer;
+                font-weight: 600;
+                position: relative;
+                width: 2rem;
+                text-align: center;
+                font-size: 1.1rem;
+
+                &:hover {
+                    &::after {
+                        position: absolute;
+                        top: -10px;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+
+            .editbutton {
+                color: rgb(11, 94, 215);
+
+                &:hover {
+                    &::after {
+                        content: "Edit";
+                        right: 0rem;
+                    }
+                }
+            }
+
+            .savebutton {
+                color: rgb(11, 215, 89);
+
+                &:hover {
+                    &::after {
+                        content: "Save";
+                        right: 0;
+                    }
+                }
+            }
+
+            .delete {
+                color: rgb(215, 11, 28);
+
+                &:hover {
+                    &::after {
+                        content: "Delete";
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

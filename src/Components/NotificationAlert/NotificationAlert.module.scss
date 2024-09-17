@@ -1,0 +1,68 @@
+.notifyAlertSection {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 3px 6px;
+    border-radius: 0.4rem;
+    color: #282727;
+    height: fit-content !important;
+    width: 95% !important;
+    // margin: 0 auto;
+    margin: 0.6rem;
+    margin-top: 0.2rem;
+
+    // background: rgb(251 210 210);
+    &:not(:last-child) {
+        margin-bottom: 0.8rem;
+    }
+
+    @media screen and (max-width:768px) {
+        &:last-child {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    p {
+        margin-bottom: 0 !important;
+    }
+
+    .notifyAlertHeader {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width:768px) {
+            font-size: 14px;
+        }
+
+        .alertContent {
+            letter-spacing: 0.8px;
+        }
+
+        p {
+            font-weight: 600;
+        }
+    }
+
+    .notifyDescription {
+        padding-top: 3px;
+
+        @media screen and (max-width:768px) {
+            font-size: 13px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .notifyList {
+        height: 23vh !important;
+    }
+}
+
+.noDataNotify {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #67748e;
+    margin-top: 12px;
+    margin-bottom: 1rem;
+}

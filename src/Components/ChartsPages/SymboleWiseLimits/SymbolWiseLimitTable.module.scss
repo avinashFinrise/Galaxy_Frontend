@@ -1,0 +1,177 @@
+.alertTableSection {
+
+    .optionCheckBoxSection,
+    .optionSection {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        font-size: 14px;
+        font-weight: 300;
+        z-index: 999;
+
+        text-transform: capitalize;
+    }
+
+    .optionSection {
+        right: 14.5rem;
+        top: 1.2rem;
+
+        .formSelect {
+            border: none;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: 600;
+            color: #0a4a5c;
+
+            &:focus {
+                box-shadow: unset;
+            }
+
+            @media screen and (max-width: 768px) {
+                // font-size: 12px;
+                padding-left: 0;
+                padding-right: 1.9rem;
+                background-size: 9px 13px;
+                background-position: right 0.9rem center;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            position: unset;
+            // justify-content: end;
+        }
+    }
+
+    .optionCheckBoxSection {
+        right: 5.3rem;
+        top: 1.5rem;
+
+        @media screen and (max-width: 768px) {
+            position: unset;
+            justify-content: space-between;
+            height: 3.4rem;
+        }
+
+        .saveBtn {
+            font-size: 13px;
+            border-radius: 3px;
+            border: none;
+            color: #ffffff;
+            padding: 3px 7px;
+            text-transform: uppercase;
+            background: #008ea8;
+            margin-right: 1rem;
+
+            .textBtnContent {
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+
+            .btnIcon {
+                display: none;
+            }
+
+            @media screen and (max-width: 768px) {
+                position: absolute;
+                top: 0px;
+                padding: 3px;
+
+                .btnIcon {
+                    display: block;
+                    font-size: 1.14rem;
+                    line-height: 0;
+                }
+
+            }
+
+        }
+
+        // width: clamp(9rem, 8%, 40%);
+        .formCheck {
+            margin-bottom: 0;
+            margin-left: 2rem;
+
+
+            @media screen and (max-width: 768px) {
+                margin-left: 1rem;
+            }
+        }
+
+    }
+
+    .alertTable {
+        height: 87vh;
+
+        @media screen and (max-width: 768px) {
+            height: 83vh;
+        }
+    }
+}
+
+.exchangeSelection,
+.groupSelection,
+.symbolSelection {
+
+    // @media screen and (max-width: 768px) {
+    //   margin-right: 0.5rem;
+    // }
+    .selectContent {
+        color: #0a4a5c;
+        background-color: transparent;
+        font-weight: 600;
+        font-size: 13px;
+        border: none;
+        padding: 0 9px;
+
+        @media screen and (max-width: 768px) {
+            padding: 0;
+            font-size: 12px;
+        }
+    }
+
+    .dropdownOption {
+        padding: 4px;
+        font-size: 13px;
+        min-width: fit-content;
+        max-height: 20rem;
+        overflow: auto;
+
+        .formCheck {
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 12px;
+            max-height: 18rem;
+        }
+    }
+}
+
+.expandBtn {
+    button {
+        font-size: 1.2rem;
+        padding: 0;
+        line-height: 0;
+        background: transparent;
+        border: 0.85px solid #0a4a5c;
+        border-radius: 3px;
+        color: #0a4a5c;
+        text-transform: capitalize;
+
+        &:hover {
+            background: #293242;
+            color: #ffff;
+
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 16px;
+            line-height: 0;
+            border: 0.63px solid #0a4a5c;
+            border-radius: 2px;
+            padding: 0;
+        }
+    }
+}

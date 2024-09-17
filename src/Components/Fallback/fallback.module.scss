@@ -1,0 +1,36 @@
+.container {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 1rem;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    div {
+        flex-wrap: wrap;
+        margin: 0.25rem;
+    }
+}
+
+.graphWrappher {
+    display: flex;
+    height: 100%;
+    gap: 1rem;
+    height: 100%;
+
+    svg {
+        font-size: 7rem !important;
+    }
+
+    >* {
+        flex: 1;
+    }
+
+}

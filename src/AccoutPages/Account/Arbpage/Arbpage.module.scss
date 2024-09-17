@@ -1,0 +1,17 @@
+.arbSection {
+    @media screen and (max-width: 768px) {
+        height: 93vh;
+    }
+
+    .arbSingleTab {
+        min-height: 1.8rem !important;
+        font-size: 15px !important;
+        min-width: 5rem !important;
+        height: 1.8rem;
+
+        @media screen and (max-width: 768px) {
+            font-size: 12px;
+            min-height: 1.7rem;
+        }
+    }
+}

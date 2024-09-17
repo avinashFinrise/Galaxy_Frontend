@@ -1,0 +1,37 @@
+.marketWatchSection {
+    form {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 2px;
+        right: 6px;
+        width: 81%;
+        justify-content: end;
+        height: 1.4rem;
+
+        .btn {
+            background: #293242;
+            border: none;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            border-radius: 3px;
+            margin-left: 1rem;
+            font-size: 0.7rem;
+        }
+    }
+
+    .antFormItem {
+        width: min(70%, 500px);
+        margin-bottom: 0rem;
+    }
+
+    .long {
+        width: 1000px;
+    }
+}
+
+.marketWatchTable {
+    margin-top: 0.4rem;
+}

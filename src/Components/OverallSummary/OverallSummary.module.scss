@@ -1,0 +1,31 @@
+.overallSummarySection {
+    height: 100%;
+
+    .overallSummaryHeader {
+        position: fixed;
+        text-transform: capitalize;
+        top: 0;
+        right: 0.5rem;
+
+        @media screen and (max-width: 768px) {
+            position: absolute;
+            top: 0.4rem;
+        }
+
+        .selectForm {
+            border: none;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 700;
+            color: #0a4a5c;
+            margin-right: 0.6rem;
+            background-color: transparent;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+}

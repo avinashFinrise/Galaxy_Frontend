@@ -1,0 +1,52 @@
+@media screen and (max-width:768px) {
+  .carousection {
+    width: 93vw !important;
+    margin: 0 auto;
+    display: flex !important;
+    box-shadow: -1px 0px 7px 0px #0000001A;
+    // height: 39vh;
+    height: 47vh;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    border: none !important;
+
+    .cardHeader {
+      display: flex;
+      align-items: center;
+      // padding: 0.5rem;
+      padding: 0.3rem 0.5rem;
+      border-bottom: none;
+      background: transparent;
+      color: #0A4A5C;
+
+      p {
+        margin-bottom: 0;
+        font-size: 0.9rem;
+        cursor: pointer;
+      }
+    }
+
+    .cardBody {
+      // padding: 0.5rem;
+      padding: 1rem;
+      padding: 0.3rem 0.7rem;
+      flex-grow: 1;
+    }
+  }
+
+  .alertCardSection {
+    max-height: 37vh;
+    min-height: 13vh;
+    height: auto;
+
+
+
+    .cardBody {
+      // overflow-y: auto;
+      height: 14rem;
+      padding: 0.5rem;
+    }
+  }
+
+}

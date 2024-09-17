@@ -1,0 +1,159 @@
+.downLoadSection {
+  .downloadReportSelect {
+    position: absolute;
+    top: -2.3rem;
+
+    select {
+      color: #0a4a5c;
+      font-weight: 600;
+      border: none;
+      text-transform: capitalize;
+      font-size: 1rem;
+      padding-left: 6px;
+      padding-bottom: 1px;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .downloadReportSelectToggle {
+    position: absolute;
+    top: -2.1rem;
+    right: 3.5rem;
+    display: flex;
+    gap: 1rem;
+
+    @media screen and (max-width:768px) {
+      position: relative;
+      top: -5px;
+      display: flex;
+      gap: 0.5rem;
+      font-size: 0.86rem;
+      left: 6px;
+    }
+
+    select {
+      color: #0a4a5c;
+      font-weight: 600;
+      border: none;
+      text-transform: capitalize;
+      font-size: 1rem;
+      padding-left: 6px;
+      padding-bottom: 1px;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .downloadType {
+    margin-bottom: 1rem;
+  }
+
+  .downdReportsection {
+    // display: flex;
+    // // border-bottom: 1px solid #000;
+    // align-items: center;
+    // color: #293242;
+    // justify-content: space-between;
+
+    p {
+      margin-bottom: 0.2rem;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .datesinglesection {
+      // &:first-child {
+      //     padding-left: 0.7rem;
+      // }
+
+      border-bottom: 1px solid #000;
+      // padding-left: 0.5rem;
+      // width: 21vw;
+      padding: 0 0.5rem 0.5rem;
+      margin-bottom: 1rem;
+
+      @media screen and (max-width: 768px) {
+        // max-width: 45%;
+        line-height: 1.4;
+        // padding-left: 0.2rem;
+      }
+
+      .datePicker {
+        width: -webkit-fill-available;
+        border: none;
+      }
+
+      // input {
+      //   background: transparent;
+      //   border: none;
+      //   color: #293242;
+      //   font-size: 0.9375rem;
+
+      //   &:focus-visible {
+      //     outline: unset;
+      //   }
+
+      //   @media screen and (max-width: 768px) {
+      //     font-size: 12.6px;
+      //     width: 6.2rem;
+      //   }
+      // }
+    }
+
+    .btwndateuline {
+      width: 1rem;
+      position: relative;
+      z-index: 1;
+      margin: 0 1rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 50%;
+        /* or 100px */
+        border-bottom: 2px solid #293242;
+
+        @media only screen and (min-width: 1030px) and (max-width: 1566px) {
+          width: 40%;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        margin: 0 0.3rem;
+        width: 0.8rem;
+
+        &::before {
+          // width: 31%;
+          left: 3px;
+        }
+      }
+    }
+
+    .btnSection {
+      display: flex;
+      justify-content: center;
+
+      button {
+        // border: 2px solid #007846;
+        border: 2px solid #06be71;
+        background: transparent;
+        border-radius: 4px;
+        padding: 0.42rem 1.625rem;
+        margin-left: 1rem;
+        color: #06be71;
+
+        @media screen and (max-width: 768px) {
+          padding: 0.2rem 1.1rem;
+        }
+      }
+    }
+  }
+}

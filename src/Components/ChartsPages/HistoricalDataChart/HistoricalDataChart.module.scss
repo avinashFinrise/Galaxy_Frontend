@@ -1,0 +1,198 @@
+.historicalDataSection {
+  width: 100%;
+  height: 100%;
+
+  .hisoptionSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    // width: clamp(17rem, 34%, 50%);
+    position: absolute;
+    // top: 1px;
+    top: 2px;
+    right: 0.5rem;
+    color: #0a4a5c;
+    font-weight: 600;
+    line-height: 1.4;
+
+    @media screen and (max-width: 768px) {
+      color: #24bde9;
+      // width: clamp(14rem, 37%, 50%);
+      font-weight: 500;
+      right: 10px;
+      font-size: 12px;
+      top: 5px;
+    }
+
+    // @media only screen and (min-width: 1030px) and (max-width: 1566px) {
+    //     width: clamp(17rem, 34%, 50%);
+    // }
+
+    .hisExpBtn {
+      // font-size: 13.59px;
+      padding: 0 5px;
+      line-height: 1.3;
+
+      .btnIcon {
+        display: none;
+      }
+
+      @media only screen and (min-width: 1030px) and (max-width: 1566px) {
+        font-size: 13px;
+      }
+
+      @media screen and (max-width: 768px) {
+        margin-right: 0.5rem;
+
+        .textBtnContent {
+          display: none;
+        }
+
+        .btnIcon {
+          display: block;
+          font-size: 1rem;
+          line-height: 0;
+        }
+      }
+    }
+
+    .submitBtn {
+      button {
+        font-size: 1.2rem;
+        padding: 0;
+        line-height: 0;
+
+        @media screen and (max-width: 768px) {
+          font-size: 16px;
+          line-height: 0;
+        }
+      }
+    }
+
+    .hisExpBtn,
+    .submitBtn button {
+      background: transparent;
+      border: 0.85px solid #0a4a5c;
+      border-radius: 3px;
+      color: #0a4a5c;
+      text-transform: capitalize;
+
+      // position: absolute;
+      // top: 7px;
+      // right: 12px;
+      &:hover {
+        background: #293242;
+        color: #ffff;
+      }
+
+      @media screen and (max-width: 768px) {
+        border: 0.63px solid #0a4a5c;
+        border-radius: 2px;
+        padding: 0;
+      }
+    }
+
+    @media only screen and (min-width: 1030px) and (max-width: 1566px) {
+      font-size: 12px;
+    }
+
+    .exchangeSelection,
+    .groupSelection,
+    .symbolSelection {
+      @media screen and (max-width: 768px) {
+        margin-right: 0.5rem;
+      }
+
+      .selectContent {
+        color: #0a4a5c;
+        background-color: transparent;
+        font-weight: 600;
+        font-size: 13px;
+        border: none;
+        text-transform: uppercase;
+
+        padding: 0 5px;
+
+        @media screen and (max-width: 768px) {
+          padding: 0;
+          font-size: 10px;
+        }
+      }
+
+      .dropdownOption {
+        padding: 4px;
+        font-size: 13px;
+        min-width: fit-content;
+        max-height: 20rem;
+        overflow: auto;
+
+        .formCheck {
+          margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+          max-height: 18rem;
+        }
+      }
+    }
+  }
+
+  .hisgraphSelectionSection,
+  //CHistorical class name
+  .graphSelectionSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // width: clamp(10%, 22vw, 100%);
+    width: clamp(10%, 28vw, 56%);
+    margin: 0 auto;
+    font-size: 13.64px;
+    cursor: pointer;
+    margin-top: 3px;
+
+    @media only screen and (min-width: 1030px) and (max-width: 1566px) {
+      width: clamp(10%, 24vw, 56%);
+    }
+
+    .item {
+      span {
+        // content: "";
+        padding: 6px;
+        height: 11px;
+        display: inline-block;
+        margin-right: 3px;
+        border-radius: 3px;
+      }
+
+      margin-right: 0.5rem;
+    }
+
+    .arbSection span {
+      background: #fd8536;
+    }
+
+    .dollarMtmSection span {
+      background: #00b3c0;
+    }
+
+    .brokerageSection span {
+      background: #06be71;
+    }
+
+    .cosSection span {
+      background: #a12929d6;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .graphSelectionSection {
+      width: clamp(10%, 56vw, 100%);
+    }
+
+    .hisgraphSelectionSection {
+      width: clamp(10%, 70vw, 100%);
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.inputWrapper {
+    display: flex;
+    padding: 0.5rem 0.3rem;
+    border: 1px solid #E6E9EC;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    overflow-y: auto;
+
+    >div {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    input {
+        border: none;
+        height: 100%;
+        width: 100%;
+        font-size: 1.2rem;
+        outline: none;
+    }
+}
+
+.singleElement {
+    padding: 0.4rem 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #E5E7EB;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: max-content;
+}
+
+.options {
+    background-color: white;
+    z-index: 1000;
+    overflow-y: auto;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    width: 100%;
+    border-radius: 0 0 0.5rem 0.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    >p {
+        transition: all 0.3s ease-in-out;
+        margin-bottom: 0;
+        margin: 0.5rem 0.5rem;
+        padding: 0.2rem;
+        border-radius: 0.2rem;
+    }
+
+    >p:hover {
+        background-color: #eee;
+    }
+}
+
+.active {
+    background-color: #6599e1 !important;
+    color: white !important;
+}

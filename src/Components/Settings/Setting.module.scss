@@ -1,0 +1,209 @@
+// .settingMainPage{
+//     overflow: hidden;
+//     height: 100vh;
+// }
+.settingPage {
+  position: relative;
+  opacity: 1;
+  background: transparent;
+  color: rgb(52, 71, 103);
+  padding: 0 0rem 2rem 0rem;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 1.3rem;
+  }
+
+  .settingHeaderBanner {
+    position: relative;
+    min-height: 10rem;
+    opacity: 1;
+    color: rgb(52, 71, 103);
+    // background: linear-gradient(
+    //       310deg,
+    //       rgba(33, 82, 255, 0.6),
+    //       rgba(33, 212, 253, 0.6)
+    //     )
+    //     50% center/cover,
+    //   url(../../assets/Img/setting_background.jpg) transparent;
+    background: linear-gradient(310deg, rgb(58 61 193), rgb(5 45 53 / 56%)) 50% center/cover,
+      url(/src/assets/Img/setting_background.jpg) transparent;
+    border-radius: 1rem;
+    background-position: 50% center;
+    object-fit: cover;
+    // background-repeat: no-repeat;
+
+    @media screen and (max-width: 768px) {
+      min-height: 8rem;
+    }
+  }
+
+  .settingHeader {
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    flex-direction: row;
+    border: 0px solid rgba(0, 0, 0, 0.125);
+    border-radius: 1rem;
+    background: rgb(255 255 255);
+    box-shadow: rgb(255 255 255 / 90%) 0rem 0rem 0.0625rem 0.0625rem inset,
+      rgb(0 0 0 / 5%) 0rem 1.25rem 1.6875rem 0rem;
+    padding: 1.4rem;
+    margin-top: -64px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    align-items: center;
+    backdrop-filter: url();
+
+    @media screen and (max-width: 768px) {
+      padding: 0.8rem;
+    }
+
+    .settinguserIcon {
+      transition: all 200ms ease-in-out 0s;
+      position: relative;
+
+      img {
+        object-fit: cover;
+        // border-radius: 0.75rem;
+        border-radius: 50%;
+        background: transparent;
+        box-shadow: rgb(0 0 0 / 12%) 0rem 0.3125rem 0.625rem 0rem;
+        width: 4.625rem;
+        height: 4.625rem;
+        margin-right: 1rem;
+      }
+
+      .cameraIcon {
+        position: absolute;
+        right: 1.4rem;
+        top: 3.2rem;
+        color: rgba(0, 0, 0, 0.7);
+        background: rgb(233, 236, 239);
+        min-width: 1rem;
+        min-height: 1rem;
+        border-radius: 0.5rem;
+        padding: 5px;
+        box-shadow: rgb(20 20 20 / 12%) 0rem 0.25rem 0.375rem -0.0625rem,
+          rgb(20 20 20 / 7%) 0rem 0.125rem 0.25rem -0.0625rem;
+        display: grid;
+        cursor: pointer;
+      }
+    }
+
+    .settinguserInfo {
+      h6 {
+        font-size: 1.5rem;
+        color: rgb(52, 71, 103);
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+
+      // h5 {
+      //   font-size: 1rem;
+      //   text-transform: none;
+      //   color: rgb(52, 71, 103);
+      //   font-weight: bold;
+      //   text-transform: uppercase;
+      // }
+
+      span {
+        // font-family: Roboto, Helvetica, Arial, sans-serif;
+        font-size: 0.76rem;
+        letter-spacing: 0.5px;
+        color: rgb(52, 71, 103);
+        font-weight: bold;
+        background: rgb(117 239 172);
+        padding: 2px 5px;
+        border-radius: 3px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+
+
+.settingallContent {
+  @media screen and (max-width: 768px) {
+    // margin-right: 6px;
+  }
+
+  .settingTabs {
+    background: rgb(255, 255, 255);
+    border-radius: 1rem;
+    box-shadow: rgb(0 0 0 / 5%) 0rem 1.25rem 1.6875rem 0rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: rgb(52, 71, 103);
+    height: 64vh;
+    overflow: overlay;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 1.3rem;
+      height: auto;
+    }
+
+    .setHeading {
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      text-align: left;
+
+      .setHeadimgIcon {
+        color: rgba(0, 0, 0, 0.7);
+        background: rgb(233, 236, 239);
+        min-width: 2rem;
+        min-height: 2rem;
+        border-radius: 0.5rem;
+        padding: 9px;
+        box-shadow: rgb(20 20 20 / 12%) 0rem 0.25rem 0.375rem -0.0625rem,
+          rgb(20 20 20 / 7%) 0rem 0.125rem 0.25rem -0.0625rem;
+        //   transition: margin 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        margin-right: 1rem;
+        display: grid;
+      }
+    }
+
+    .settingSingleTab {
+      // max-width: fit-content;
+      text-transform: capitalize;
+      margin-top: 7px;
+      max-width: inherit;
+      align-items: flex-start;
+      // &:active {
+      //     color: rgb(38, 0, 255) !important;
+      //     border-bottom: 2px solid rgb(77, 76, 76) !important;
+      // }
+
+      &:hover {
+        border-radius: 0.5rem;
+        color: #fff;
+        // box-shadow: rgb(17 17 26 / 10%) 0px 4px 16px, rgb(17 17 26 / 5%) 0px 8px 32px;
+        // border-bottom: 1px solid rgb(77, 76, 76);
+        background: linear-gradient(310deg,
+            rgb(33, 82, 255),
+            rgb(33, 212, 253));
+      }
+
+      span {
+        align-items: flex-start;
+        text-align: initial;
+      }
+    }
+  }
+
+  .settingProfileTab {
+    // margin-bottom: 2rem;
+    height: 64vh;
+    overflow: overlay;
+
+    @media screen and (max-width: 768px) {
+      height: auto;
+      overflow: unset;
+    }
+
+    @media screen and (min-width: 1030px) and (max-width: 1566px) {
+      height: 68vh;
+    }
+  }
+}

@@ -1,0 +1,328 @@
+.allUserSection {
+  position: fixed;
+  width: 23%;
+  padding-top: 1rem;
+
+  @media screen and (max-width: 768px) {
+    position: unset;
+    width: auto;
+  }
+}
+
+.fullAccess {
+  padding: 1.5rem;
+}
+
+.assignCompany div,
+.assignFileSwitch {
+  label {
+    // vertical-align: sub;
+    line-height: 1.6;
+  }
+}
+
+.browseFile {
+  border: 1px solid #0d6efd;
+  padding: 0 2px;
+  border-radius: 0.3rem;
+  margin-left: 0.7rem;
+  cursor: pointer;
+  background: #0d6efd;
+  color: #fff;
+}
+
+.userManagement {
+  // height: 84vh;
+  max-height: 84vh;
+  min-height: 19vh;
+  overflow: overlay;
+  // padding: 0 1rem;
+  padding: 0 1rem 0 0.6rem;
+
+  .userManageCardDisable {
+    background-color: #c3c3c3 !important;
+  }
+
+  .userManageCardEnable {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .userManageCard {
+    color: rgba(0, 0, 0, 0.87);
+    // transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border: 0px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.5rem;
+
+    box-shadow: rgb(255 255 255 / 90%) 0rem 0rem 0.0625rem 0.0625rem inset,
+      rgb(0 0 0 / 5%) 0rem 1.25rem 1.6875rem 0rem;
+    padding: 5px;
+    align-items: center;
+    display: flex;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      // background: linear-gradient(
+      //   310deg,
+      //   rgb(33, 212, 253),
+      //   rgb(33 82 255 / 66%)
+      // ) !important;
+      background: linear-gradient(310deg,
+          rgb(0 142 168 / 37%),
+          rgb(33 120 162)) !important;
+    }
+
+    .userIcon {
+      transition: all 200ms ease-in-out 0s;
+      width: auto;
+
+      img {
+        text-align: center;
+        object-fit: cover;
+        border-radius: 0.75rem;
+        background: transparent;
+        font-weight: 700;
+        // box-shadow: rgb(0 0 0 / 12%) 0rem 0.3125rem 0.625rem 0rem;
+        width: 3rem;
+        height: 3rem;
+        // margin-right: 1.5rem;
+        // width: 82%;
+        // height: 82%;
+      }
+    }
+
+    // .userBlink {
+    //   background: #fff;
+    //   min-width: 1.3rem;
+    //   min-height: 1.3rem;
+    //   border-radius: 50%;
+    //   display: inline-grid;
+    //   place-items: center;
+    //   cursor: pointer;
+    //   position: absolute;
+    //   top: 4.6rem;
+    //   left: 4.6rem;
+    //   .blinkSection {
+    //     line-height: 0;
+    //     .blinkCircle,
+    //     .blinkCircle1 {
+    //       padding: 0px 6px;
+    //       border-radius: 50%;
+    //       line-height: 1;
+    //       font-size: 11px;
+    //     }
+    //     .blinkCircle1 {
+    //       background: red;
+    //     }
+    //     .blinkCircle {
+    //       background: green;
+    //     }
+    //   }
+    // }
+    .userInfo {
+      max-height: 7.8vh;
+      margin-left: 1.7rem;
+
+      .flName {
+        font-size: 0.98rem;
+        // font-family: Roboto, Helvetica, Arial, sans-serif;
+        opacity: 1;
+        line-height: 1;
+        color: rgb(52, 71, 103);
+        font-weight: bold;
+        margin-bottom: 0;
+        text-transform: uppercase;
+      }
+
+      .username {
+        font-size: 0.9rem;
+        font-weight: bold;
+        opacity: 1;
+        color: rgb(29 90 7);
+      }
+
+      .cardcaption {
+        color: rgb(33, 82, 255);
+      }
+
+      span,
+      h6 {
+        // font-family: Roboto, Helvetica, Arial, sans-serif;
+        font-size: 0.875rem;
+        letter-spacing: 0.02857em;
+        opacity: 1;
+        color: rgb(60, 68, 83);
+        font-weight: bold;
+      }
+    }
+
+    .roleSection {
+      position: absolute;
+      top: 10px;
+      right: 1rem;
+      text-transform: uppercase;
+      font-size: 12px;
+
+      span {
+        color: #215fff;
+        font-weight: 600;
+      }
+    }
+
+    // .btnSection {
+    //     display: flex;
+    //     justify-content: end;
+    //     width: 100%;
+    //     position: absolute;
+    //     right: 1rem;
+    //     top: 1rem;
+    //     .btn {
+    //         padding: 4px 13px;
+    //         background: #218838;
+    //         border-radius: 0.5rem;
+    //         box-shadow: rgb(20 20 20 / 12%) 0rem 0.25rem 0.375rem -0.0625rem,
+    //             rgb(20 20 20 / 7%) 0rem 0.125rem 0.25rem -0.0625rem;
+    //         border-color: #1e7e34;
+    //         font-size: 0.9rem;
+    //         font-weight: bold;
+    //         color: #fff;
+    //     }
+    // }
+  }
+}
+
+.btnSection {
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-right: 7px;
+    border-radius: 3px;
+    padding: 1px 4px;
+    font-size: 0.9rem;
+
+  }
+
+  .disableBtn {
+    background: #293242;
+    border: 2px solid #293242;
+  }
+
+  .deleteBtn {
+    background: red;
+    border: 2px solid red;
+
+  }
+}
+
+.createBtn {
+  display: flex;
+  justify-content: end;
+  padding-top: 1rem;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 1rem;
+  }
+
+  .usercreateBtn {
+    width: 13rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-decoration: none;
+    padding: 4px 6px;
+
+    @media screen and (max-width: 768px) {
+      // width: 45%;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.searchUserSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  .searchField {
+    margin-bottom: 0.7rem;
+    position: relative;
+    padding: 0 0 0 0.6rem;
+    width: 100%;
+
+    .searchBox {
+      border-radius: 0.5rem;
+      border: 1px solid #67748e;
+      padding: 0.5rem;
+      width: 100%;
+      background: transparent;
+    }
+
+    .searchIcon {
+      position: absolute;
+      right: 16px;
+      top: 8px;
+      cursor: pointer;
+    }
+
+  }
+
+  .filterIcon {
+    color: #000;
+
+  }
+}
+
+.userDropItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.mainHeadingSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+
+  .username {
+    padding: 1rem;
+    opacity: 1;
+    background: transparent;
+    font-size: 1.2rem;
+    color: #218838;
+    font-weight: bold;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1rem;
+      padding-left: 0;
+    }
+  }
+}
+
+.settingTabContent1,
+.userSettingFeature {
+  overflow: overlay;
+  min-height: auto;
+  padding-left: 12px;
+}
+
+.settingTabContent1 {
+  // height: 82.3vh;
+  max-height: 82.3vh;
+}
+
+.userSettingFeature {
+  max-height: 90vh;
+}
