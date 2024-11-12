@@ -343,7 +343,7 @@ const LimitAllotment = (props) => {
                                         <option value="" hidden>
                                             Select Symbol
                                         </option>
-                                        {(+marginConfig.data.exchange=="14"? ["NA",...uniqueSymbols]:uniqueSymbols)?.map((val) => {
+                                        {(+marginConfig.data.exchange=="23"? ["CREDIT",...uniqueSymbols]:uniqueSymbols)?.map((val) => {
                                             return <option value={val}>{val}</option>;
                                         })}
                                     </Form.Select>

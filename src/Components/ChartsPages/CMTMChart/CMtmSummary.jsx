@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Notification } from '../../DynamicComp/Notification';
 import { AgGridReact } from 'ag-grid-react';
-import { GET_MTMHISTORY_API } from '../../../API/ApiServices';
+import { GET_COMPONENTSETTING_API, GET_MTMHISTORY_API, POST_COMPONENTSETTING_API } from '../../../API/ApiServices';
 import { shallowEqual, useSelector } from 'react-redux';
 import "ag-grid-enterprise";
 import "ag-grid-community/styles/ag-grid.css";
@@ -367,6 +367,52 @@ function CMtmSummary() {
   const getRowId = useCallback((params) => {
     return params.data.symbol;
   });
+
+  //----------------------- SAVE WORKSPACE ------------------------------------------------
+
+  const [componentSetting, setComponentSetting] = useState(null)
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const { data } = await GET_COMPONENTSETTING_API(componentInfo)
+        setComponentSetting(data.result)
+
+        const setting = data.result[componentInfo.componenttype]?.setting
+        // console.log({ settinggg: setting })
+        if (setting) {
+          setting["basecurrency"] && setBaseCurrency(setting["basecurrency"])
+
+        }
+      } catch (error) {
+        console.log({ errorrrrr: error })
+      }
+    })()
+  }, [])
+
+  useEffect(() => {
+    if (componentSetting === null) return
+    const id = componentSetting[componentInfo.componenttype]?.id
+    const body = {
+      event: id ? "update" : "create",
+      data: {
+        ...componentInfo,
+        setting: { basecurrency },
+      },
+    }
+    if (id) body.data["id"] = id;
+
+    (async () => {
+      try {
+        const { data } = await POST_COMPONENTSETTING_API(body)
+      } catch (error) {
+        console.log({ error })
+      }
+    })()
+  }, [basecurrency])
+
+
+  //----------------------- END SAVE WORKSPACE ------------------------------------------------
 
   return (
     <>

@@ -495,8 +495,10 @@ const CMtmChartNew = () => {
   //   });
   // }, [positionChartData,selectedOptions])
   const handleDropdownToggle = (e, selectedkey, toUpdateKey) => {
+    console.log("hi");
+
     if (!e) return;
-    if (filterKey == 'netmtm') return;
+    // if (filterKey == 'netmtm') return;
     let params = {
       "event": "getselectedfilters",
       "data":
@@ -1194,7 +1196,7 @@ const CMtmChartNew = () => {
       </div>
       <ModalPopup
         fullscreen={true}
-        title=" Mtm Summary"
+        title="C Mtm Summary"
         flag={showMtmSummary}
         close={() => { setShowMtmSummary(prev => !prev) }}
         component={
@@ -1207,7 +1209,7 @@ const CMtmChartNew = () => {
         flag={showCMtmSymbolWise}
         close={cMtmSymbol}
         component={
-          <CMTMSymbolTable sharing={filterKeySharing} type={filterKey} basecurrency={basecurrency}/>
+          <CMTMSymbolTable sharing={filterKeySharing} type={filterKey} basecurrency={basecurrency} />
         }
       />
       <ModalPopup

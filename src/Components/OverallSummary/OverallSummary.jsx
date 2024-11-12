@@ -3,7 +3,7 @@ import useGridSettings from '../CustomHook/useGridSettings';
 import { Form } from 'react-bootstrap';
 import { AgGridReact } from 'ag-grid-react';
 import { Notification } from '../DynamicComp/Notification';
-import { GET_MTMHISTORY_API, GET_NETPOSITION_API } from '../../API/ApiServices';
+import { GET_COMPONENTSETTING_API, GET_MTMHISTORY_API, GET_NETPOSITION_API, POST_COMPONENTSETTING_API } from '../../API/ApiServices';
 import { shallowEqual, useSelector } from 'react-redux';
 import overStyle from './OverallSummary.module.scss'
 import "ag-grid-enterprise";
@@ -234,7 +234,7 @@ function OverallSummary() {
     colDef: { generateColDef, row: { symbol: 0, bfmtm: 0, combfmtm: 0, cfqty: 0, com_cfqty: 0, tdmtm: 0, comtdmtm: 0, ttlmtm: 0, comttlmtm: 0, } },
     settings: {
       sideBar: true
-    }
+    },
   })
 
   const handleCurrencyChange = (e) => {
@@ -247,6 +247,58 @@ function OverallSummary() {
   const getRowId = useCallback((params) => {
     return params.data.symbol;
   });
+
+
+  //----------------------- SAVE WORKSPACE ------------------------------------------------
+
+  const componentInfoBaseCurrency = { componentname: "cOverAllSummaryBaseCurrency", componenttype: "graph" }
+  const [componentSetting, setComponentSetting] = useState(null)
+
+  useEffect(() => {
+    console.log("CALEDDDDDDDDDDDDDDDDDDDDD");
+    (async () => {
+      try {
+        const { data } = await GET_COMPONENTSETTING_API(componentInfoBaseCurrency)
+        setComponentSetting(data.result)
+
+        const setting = data.result[componentInfoBaseCurrency.componenttype]?.setting
+        // console.log({ ress: setting })
+        if (setting) {
+          if (setting["basecurrency"]) setBaseCurrency(setting["basecurrency"])
+        }
+      } catch (error) {
+        console.log({ error })
+      }
+    })()
+  }, [])
+
+  useEffect(() => {
+    console.log("Called", componentSetting)
+    if (componentSetting === null) return
+    const id = componentSetting[componentInfoBaseCurrency.componenttype]?.id
+
+    const body = {
+      event: id ? "update" : "create",
+      data: {
+        ...componentInfoBaseCurrency,
+        setting: { basecurrency },
+      },
+    }
+    if (id) body.data["id"] = id;
+
+
+    console.log({body});
+    (async () => {
+      try {
+        const { data } = await POST_COMPONENTSETTING_API(body)
+      } catch (error) {
+        console.log({ error })
+      }
+    })()
+  }, [basecurrency])
+
+
+  //----------------------- END SAVE WORKSPACE ------------------------------------------------
 
 
   return (
